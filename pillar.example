@@ -1,0 +1,9 @@
+services:
+  enable:
+    - tmp.mount
+  disable:
+    - insecure.service
+  stop:
+    - should-not-be-running.service
+  start:
+    - should-be-running.service

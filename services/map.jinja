@@ -1,0 +1,11 @@
+{% set services_map = salt['grains.filter_by']({
+  'default': {
+    'enable': [],
+    'disable': [],
+    'start': [],
+    'stop': [],
+  },
+},
+merge=salt['pillar.get']('services', {}),
+default='default')
+%}

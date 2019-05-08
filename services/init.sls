@@ -28,9 +28,9 @@ service-{{ service_name }}-stop:
     - name: {{ service_name }}
 {% endfor %}
 
-{% for service_name in services_map.mask|default([]) %}
-service-{{ service_name }}-mask:
-  service.mask:
+{% for service_name in services_map.masked|default([]) %}
+service-{{ service_name }}-masked:
+  service.masked:
     - name: {{ service_name }}
 {% endfor %}
 

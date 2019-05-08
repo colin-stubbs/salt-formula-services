@@ -7,3 +7,5 @@ services:
     - should-not-be-running.service
   start:
     - should-be-running.service
+  masked:
+    - should-be-masked.service
